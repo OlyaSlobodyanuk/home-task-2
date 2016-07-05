@@ -1,22 +1,22 @@
-import sys, math
+import sys, math # добавление используемых модулей
 
 try:	
-	outfilename = sys.argv [1]
+	outfilename = sys.argv [1] # читаем со второй позиции имя файла со входными данными
 except:
-	print("Usage:", sys.argv[0], "outfile")
-	sys.exit (1)
+	print("Usage:", sys.argv[0], "outfile") # если отсутствует какой либо файл, выводим ошибку
+	sys.exit (1) # завершаем выполнение программы
 
-ofile = open(outfilename , "w")
+ofile = open(outfilename , "w") # открываем файл для вывода результатов к записи
 
-def  myfunc(y):
+def  myfunc(y): # метод, который считает значение функции в точке
 	if y  >= 0.0:
 		return y**5* math.exp(-y)		
 	else:
 		return  0.0
 
-for i in range(2, len(sys.argv) - 1, 2):
-	x = float(sys.argv[i])
-	y = float(sys.argv[i + 1])
-	fy = myfunc(y)
-	ofile.write("%g %g\n" % (x,fy))	
-ofile.close()
+for i in range(2, len(sys.argv) - 1, 2): # для введенной строки
+	x = float(sys.argv[i]) # присваиваем переменной х значение i-го столбца файла
+	y = float(sys.argv[i + 1]) # а у - значение (i+1)-го столбца
+	fy = myfunc(y) # высчитываем значение функции в точке у
+	ofile.write("%g %g\n" % (x,fy))	# и записываем в файл форматированный вывод
+ofile.close()  # закроем доступ к файлам
