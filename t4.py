@@ -42,3 +42,14 @@ def ThirdCycle():
 		i += 1
 		
 ThirdCycle()
+
+def FourthCycle():
+	i = 1
+	while 1:
+		try:
+			CalculateLn(sys.argv[i])
+			i += 1
+		except:
+			break
+			
+FourthCycle()
