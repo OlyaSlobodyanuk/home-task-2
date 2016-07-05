@@ -7,4 +7,4 @@ for i in range(0, n):
 	print("%.4f" % r)
 	sum += r
 	
-print("������� �������� = %.4f" % (sum / n))
+print("Среднее значение = %.4f" % (sum / n))
