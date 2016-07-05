@@ -26,22 +26,16 @@ def CalculateLn(n):
 def FirstCycle():
 	for r in sys.argv[1:]:
 		CalculateLn(r)
-
-FirstCycle()
-
+	
 def SecondCycle():
 	for i in range(1, len(sys.argv)):
 		CalculateLn(sys.argv[i])
 		
-SecondCycle()
-
 def ThirdCycle():
 	i = 1
 	while i < len(sys.argv):
 		CalculateLn(sys.argv[i])
 		i += 1
-		
-ThirdCycle()
 
 def FourthCycle():
 	i = 1
@@ -51,5 +45,8 @@ def FourthCycle():
 			i += 1
 		except:
 			break
-			
+						
+FirstCycle()
+SecondCycle()
+ThirdCycle()
 FourthCycle()
